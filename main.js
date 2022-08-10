@@ -198,40 +198,49 @@
 //   console.log(primeOrNotPrime(19));
 // }
 
-{
-  // get factorial of a number
+// {
+//   // get factorial of a number
 
-  const factorial = (n) => {
-    if (n === 0) {
-      return 1;
-    }
+//   const factorial = (n) => {
+//     if (n === 0) {
+//       return 1;
+//     }
 
-    if (n === -1) {
-      return -1;
-    }
+//     if (n === -1) {
+//       return -1;
+//     }
 
-    const number = Math.abs(n);
-    let result = 1;
-    for (let i = 1; i <= number; i++) {
-      result *= i;
-    }
+//     const number = Math.abs(n);
+//     let result = 1;
+//     for (let i = 1; i <= number; i++) {
+//       result *= i;
+//     }
 
-    if (n < -1) {
-      return result - 2 * result;
-    }
+//     if (n < -1) {
+//       return result - 2 * result;
+//     }
 
-    return result;
-  };
-  // console.log(factorial(6));
+//     return result;
+//   };
+//   console.log(factorial(6));
 
-  // get nPr || nCr
+//   // get nPr || nCr
 
-  const nCr = (n, r) => {
-    if (n < r) {
-      return "MATH ERROR";
-    }
-    return factorial(n) / (factorial(r) * factorial(n - r));
-  };
+//   const nCr = (n, r) => {
+//     if (n < r) {
+//       return "MATH ERROR";
+//     }
+//     return factorial(n) / (factorial(r) * factorial(n - r));
+//   };
 
-  console.log(nCr(12, 12));
-}
+//   console.log(nCr(12, 10));
+
+//   const nPr = (n, r) => {
+//     if (n < r) {
+//       return "MATH ERROR";
+//     }
+//     return factorial(n) / factorial(n - r);
+//   };
+
+//   console.log(nPr(10, 9));
+// }

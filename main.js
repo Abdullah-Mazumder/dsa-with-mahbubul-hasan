@@ -332,3 +332,51 @@
 
   // console.log(sum(array, 2, 7));
 }
+
+{
+  // count small letter number and capital letter number from a word
+
+  // const word = "BaNgLaDeSh is AweSOME";
+  const word = "is";
+
+  const totalSmallOrCapitalLetter = (word) => {
+    let totalSmallLetter = 0;
+    let totalCapitalLetter = 0;
+
+    for (let letter of word) {
+      if (letter.charCodeAt() >= 65 && letter.charCodeAt() <= 90) {
+        totalCapitalLetter++;
+      } else if (letter.charCodeAt() >= 97 && letter.charCodeAt() <= 122) {
+        totalSmallLetter++;
+      }
+    }
+
+    return { totalSmallLetter, totalCapitalLetter };
+  };
+
+  // console.log(totalSmallOrCapitalLetter(word));
+}
+
+{
+  // get total words number from a sentace
+  const sentace = "islam is  my,   life. i always love Allah   and    Mohammad";
+
+  const getTotalWordsNumber = (sentace) => {
+    const sentaceArray = sentace.split(/[ . ,]+/);
+    return sentaceArray.length;
+  };
+
+  // console.log(getTotalWordsNumber(sentace));
+}
+
+{
+  // get day, month, year from a sprcified date format
+
+  const date = "21/9/2013";
+  const dateFormattor = (date) => {
+    const dateArray = date.split("/");
+    const [day, month, year] = dateArray;
+    return { day, month, year };
+  };
+  // console.log(dateFormattor(date));
+}

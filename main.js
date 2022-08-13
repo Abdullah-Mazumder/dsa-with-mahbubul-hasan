@@ -112,33 +112,33 @@
   // console.log(findMaxValueFromArray(numbers));
 }
 
-{
-  // get position in quardrant from a points
+// {
+//   // get position in quardrant from a points
 
-  const getPositionInQuardrantFromAPoints = (x, y) => {
-    if (x === 0 && y === 0) {
-      return `the position of (${x}, ${y}) is MAIN POINT.`;
-    }
+//   const getPositionInQuardrantFromAPoints = (x, y) => {
+//     if (x === 0 && y === 0) {
+//       return `the position of (${x}, ${y}) is MAIN POINT.`;
+//     }
 
-    if (x >= 0 && y > 0) {
-      return `the position of (${x}, ${y}) is in FIRST QUARDRANT.`;
-    }
+//     if (x >= 0 && y > 0) {
+//       return `the position of (${x}, ${y}) is in FIRST QUARDRANT.`;
+//     }
 
-    if (x < 0 && y >= 0) {
-      return `the position of (${x}, ${y}) is in SECOND QUARDRANT.`;
-    }
+//     if (x < 0 && y >= 0) {
+//       return `the position of (${x}, ${y}) is in SECOND QUARDRANT.`;
+//     }
 
-    if ((x <= 0 && y < 0) || (x < 0 && y <= 0)) {
-      return `the position of (${x}, ${y}) is in THIRD QUARDRANT.`;
-    }
+//     if ((x <= 0 && y < 0) || (x < 0 && y <= 0)) {
+//       return `the position of (${x}, ${y}) is in THIRD QUARDRANT.`;
+//     }
 
-    if (x > 0 && y <= 0) {
-      return `the position of (${x}, ${y}) is in FOURTH QUARDRANT.`;
-    }
-  };
+//     if (x > 0 && y <= 0) {
+//       return `the position of (${x}, ${y}) is in FOURTH QUARDRANT.`;
+//     }
+//   };
 
-  // console.log(getPositionInQuardrantFromAPoints(0, 0));
-}
+//   // console.log(getPositionInQuardrantFromAPoints(0, 0));
+// }
 
 // {
 //   // 1 + 2 + 3 + .... + n
@@ -244,3 +244,91 @@
 
 //   console.log(nPr(10, 9));
 // }
+
+{
+  // convert a number from decimal to binary
+
+  const decimalToBinary = (n) => {
+    return (n >>> 0).toString(2);
+  };
+
+  // console.log(decimalToBinary(2));
+}
+
+{
+  // given a array with binary digits. convert it into a decimal
+
+  const array = [0, 1, 1, 0, 0, 1, 0, 0, 1, 1];
+
+  const toDecimal = (arr) => {
+    let number = "";
+
+    arr.forEach((n) => {
+      number += n;
+    });
+
+    number = parseInt(number, 2);
+
+    return number;
+  };
+
+  // console.log(toDecimal(array));
+}
+
+{
+  // sort a array
+
+  const array = [4, 99, 45, 88, 23, 45, 87, 134, 84983, 4533, 764];
+
+  const ascending = (arr) => {
+    return arr.sort((n1, n2) => {
+      return n1 - n2;
+    });
+  };
+
+  const descending = (arr) => {
+    return arr.sort((n1, n2) => {
+      return n2 - n1;
+    });
+  };
+
+  // console.log(ascending(array));
+  // console.log(descending(array));
+}
+
+{
+  // there are many 1 and 0 in an array. How many 1's in a row do you have to say?
+
+  const array = [1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1];
+
+  const maxOneInARow = (arr) => {
+    const str = array.join("");
+    const strArray = str.split("0");
+    let maxOneLength = 0;
+
+    strArray.forEach((item) => {
+      if (item.length > maxOneLength) {
+        maxOneLength = item.length;
+      }
+    });
+
+    return maxOneLength;
+  };
+
+  // console.log(maxOneInARow(array));
+}
+
+{
+  const array = [1, 0, 10, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1];
+
+  const sum = (arr, a, b) => {
+    let result = 0;
+    for (let i = a - 1; i <= b - 1; i++) {
+      result += arr[i];
+    }
+
+    return result;
+  };
+
+  // console.log(sum(array, 2, 7));
+}
